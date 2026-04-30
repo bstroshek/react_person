@@ -1,6 +1,8 @@
 import React from 'react';
 
-export const Person = ({ name, age, sex, isMarried, partnerName }) => {
+export const Person = props => {
+  const { name, age, sex, isMarried, partnerName } = props.person;
+
   const partner = sex === 'm' ? 'wife' : 'husband';
 
   return (
